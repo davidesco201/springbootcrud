@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "fe4c5c3b-78a8-46ff-b046-4353c1e9c397",
+		"name": "Burger Master Winners Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22817888"
+	},
+	"item": [
+		{
+			"name": "Get Winners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/winners",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Default Winner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/winner?id=egy-hamburgueseria",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "egy-hamburgueseria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Winner  (Bad Argument)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"lcriolla-kioskos\",\r\n    \"name\": \"La Criolla\",\r\n    \"grOfMeat\": 120,\r\n    \"typeOfBread\": \"Criollo\",\r\n    \"restaurant\": \"Kioskos de la Sabana\",\r\n    \"score\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Winner (Bad id)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"egy-hamburgueseria\",\r\n    \"name\": \"La Criolla\",\r\n    \"grOfMeat\": 125,\r\n    \"typeOfBread\": \"Criollo\",\r\n    \"restaurant\": \"Kioskos de la Sabana\",\r\n    \"score\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Winner (Successful)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"lcriolla-kioskos\",\r\n    \"name\": \"La Criolla\",\r\n    \"grOfMeat\": 225,\r\n    \"typeOfBread\": \"Criollo\",\r\n    \"restaurant\": \"Kioskos de la Sabana\",\r\n    \"score\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Winner (Bad Id)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"egy-hamburgueseria\",\r\n    \"name\": \"Era Gol de Yepes\",\r\n    \"grOfMeat\": 300,\r\n    \"typeOfBread\": \"Blanco\",\r\n    \"restaurant\": \"La Hamburgueseria\",\r\n    \"score\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/update/egy-hamburgueseri",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"update",
+						"egy-hamburgueseri"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Winner (Bad Argument)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"egy-hamburgueseria\",\r\n    \"name\": \"Era Gol de Yepes\",\r\n    \"grOfMeat\": 10,\r\n    \"typeOfBread\": \"Blanco\",\r\n    \"restaurant\": \"La Hamburgueseria\",\r\n    \"score\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/update/egy-hamburgueseria",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"update",
+						"egy-hamburgueseria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Winner (Successful)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"egy-hamburgueseria\",\r\n    \"name\": \"Era Gol de Yepes\",\r\n    \"grOfMeat\": 200,\r\n    \"typeOfBread\": \"Blanco\",\r\n    \"restaurant\": \"La Hamburgueseria\",\r\n    \"score\": 600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/update/egy-hamburgueseria",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"update",
+						"egy-hamburgueseria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get New Winners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/winners",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Winner (Bad Id)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/winner/delete/kioskos-la-costeñ",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"delete",
+						"kioskos-la-costeñ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Winner (Successful)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/winner/delete/lcriolla-kioskos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"delete",
+						"lcriolla-kioskos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Final Winners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/winners",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winners"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,4 @@
+Swagger links
+
+ui: http://localhost:8080/swagger-ui/#/burger-controller 
+docs: http://localhost:8080/v2/api-docs
