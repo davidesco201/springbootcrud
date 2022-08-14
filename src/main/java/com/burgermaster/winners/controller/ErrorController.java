@@ -45,6 +45,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> handleAllUncaughtException(AlreadyBoundException exception, WebRequest request) {
         return buildErrorResponse(exception, "The id is used by other Entity", HttpStatus.IM_USED, request);
     }
+
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<Object> handleAllUncaughtException(IllegalArgumentException exception, WebRequest request) {

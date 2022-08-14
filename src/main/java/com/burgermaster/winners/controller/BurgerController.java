@@ -29,11 +29,13 @@ public class BurgerController {
         burgerService.createBurger(burgerDto);
         return new ResponseEntity<>("Burger was created successfully", HttpStatus.CREATED);
     }
+
     @RequestMapping(value = "/winner/update/{id}", method = RequestMethod.POST)
     public ResponseEntity<Object> update(@PathVariable String id, @RequestBody BurgerDto burgerDto) throws Exception {
         burgerService.updateBurger(id, burgerDto);
         return new ResponseEntity<>("Burger was updated successfully", HttpStatus.OK);
     }
+
     @RequestMapping(value = "/winner/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Object> delete(@PathVariable("id") String id) {
         burgerService.deleteBurger(id);
