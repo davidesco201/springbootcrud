@@ -31,7 +31,7 @@ public class BurgerController {
     }
 
     @RequestMapping(value = "/winner/update/{id}", method = RequestMethod.POST)
-    public ResponseEntity<Object> update(@PathVariable String id, @RequestBody BurgerDto burgerDto) throws Exception {
+    public ResponseEntity<Object> update(@PathVariable("id") String id, @RequestBody BurgerDto burgerDto) throws Exception {
         burgerService.updateBurger(id, burgerDto);
         return new ResponseEntity<>("Burger was updated successfully", HttpStatus.OK);
     }
