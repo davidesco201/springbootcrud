@@ -42,13 +42,13 @@ public class ErrorController extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(AlreadyBoundException.class)
     @ResponseStatus(HttpStatus.IM_USED)
-    public ResponseEntity<Object> handleAllUncaughtException(AlreadyBoundException exception, WebRequest request) {
+    public ResponseEntity<Object> handleAlreadyBoundException(AlreadyBoundException exception, WebRequest request) {
         return buildErrorResponse(exception, "The id is used by other Entity", HttpStatus.IM_USED, request);
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<Object> handleAllUncaughtException(IllegalArgumentException exception, WebRequest request) {
+    public ResponseEntity<Object> handleIllegalArgumentException(IllegalArgumentException exception, WebRequest request) {
         return buildErrorResponse(exception, "The gr of Meat has to be more than 125 ", HttpStatus.BAD_REQUEST, request);
     }
 
