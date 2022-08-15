@@ -9,6 +9,7 @@ import lombok.Setter;
 @Setter
 public class Burger {
     public final static int MIN_GR_OF_MEAT = 125;
+    public final static int MIN_SCORE = 0;
     private String id;
     private String name;
     private int grOfMeat;

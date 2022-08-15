@@ -24,8 +24,12 @@ public class BurgerService implements IBurgerService {
         if (burgerExists(burgerDto.getId())) {
             throw new AlreadyBoundException("The burger key is already used");
         } else if (burgerDto.getGrOfMeat() < Burger.MIN_GR_OF_MEAT) {
-            throw new IllegalArgumentException("The meat gr has to be more than 125gr");
-        } else {
+            throw new IllegalArgumentException("The meat gr has to be more than 125gr"); 
+
+        } else if (burgerDto.getScore() < Burger.MIN_SCORE){
+            throw new IllegalArgumentException("The score has to be positive");
+        }
+        else {
             burgers.add(this.convertDtoToModelEntity(burgerDto));
         }
     }
