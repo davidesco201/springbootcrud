@@ -105,6 +105,34 @@
 			"response": []
 		},
 		{
+			"name": "Create Winner (Bad Argument \"Score\")",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"lcriolla-kioskos\",\r\n    \"name\": \"La Criolla\",\r\n    \"grOfMeat\": 125,\r\n    \"typeOfBread\": \"Criollo\",\r\n    \"restaurant\": \"Kioskos de la Sabana\",\r\n    \"score\": -500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create Winner (Successful)",
 			"request": {
 				"method": "POST",
@@ -169,6 +197,35 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"id\": \"egy-hamburgueseria\",\r\n    \"name\": \"Era Gol de Yepes\",\r\n    \"grOfMeat\": 10,\r\n    \"typeOfBread\": \"Blanco\",\r\n    \"restaurant\": \"La Hamburgueseria\",\r\n    \"score\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/winner/update/egy-hamburgueseria",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"winner",
+						"update",
+						"egy-hamburgueseria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Winner (Bad Argument \"Score\")",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"egy-hamburgueseria\",\r\n    \"name\": \"Era Gol de Yepes\",\r\n    \"grOfMeat\": 125,\r\n    \"typeOfBread\": \"Blanco\",\r\n    \"restaurant\": \"La Hamburgueseria\",\r\n    \"score\": -100\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

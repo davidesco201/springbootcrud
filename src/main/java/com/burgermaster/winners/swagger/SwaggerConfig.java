@@ -36,7 +36,7 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
                 "Burger Master Winners description of API.",
                 "API TOS",
                 "Terms of service",
-                new Contact("David Espitia", "www.davidesco2001.com", "davidesco2001@gmail.com"),
+                new Contact("Andrea Agudelo, David Espitia y Laura Piraneque ", "www.vamoagraduarnos.com", "davidesco2001@gmail.com"),
                 "License of API", "API license URL", Collections.emptyList());
     }
 

@@ -49,7 +49,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<Object> handleIllegalArgumentException(IllegalArgumentException exception, WebRequest request) {
-        return buildErrorResponse(exception, "The gr of Meat has to be more than 125 ", HttpStatus.BAD_REQUEST, request);
+        return buildErrorResponse(exception, exception.getMessage(), HttpStatus.BAD_REQUEST, request);
     }
 
     private ResponseEntity<Object> buildErrorResponse(Exception exception, HttpStatus httpStatus, WebRequest request) {
