@@ -42,7 +42,10 @@ public class BurgerService implements IBurgerService {
                 .orElseThrow(() -> new NoSuchElementException("The burger doesnt exists"));
         if (request.getGrOfMeat() < Burger.MIN_GR_OF_MEAT) {
             throw new IllegalArgumentException("The meat gr has to be more than 125gr");
-        } else {
+        } else if(request.getScore() < Burger.MIN_SCORE){
+            throw new IllegalArgumentException("The score has to be positive");
+        }
+        else {
             burger.setName(request.getName());
             burger.setGrOfMeat(request.getGrOfMeat());
             burger.setTypeOfBread(request.getTypeOfBread());
